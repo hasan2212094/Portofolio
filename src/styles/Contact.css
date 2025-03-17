@@ -1,0 +1,38 @@
+
+.socialMedia {
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+  }
+  
+  .socialMedia > a {
+    background-color: #222831;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .socialMedia > a > svg {
+    height: 30px;
+    width: auto;
+  }
+  .socialMedia > a:hover {
+    background-color: #63276b5b;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .socialMedia > a {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .socialMedia > a > svg {
+      height: 30px;
+      width: auto;
+    }
+  }
