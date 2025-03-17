@@ -1,7 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/HasanPaneProfile.jpg";
 import { motion } from "framer-motion";
-import resume from "../assets/resume.pdf";
+import { RiArrowRightBoxLine } from "react-icons/ri";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -33,16 +33,16 @@ const Hero = () => {
             >
               Full Stack Developer
             </motion.span>
-            <a href={resume} download="resume">
-              <motion.button
-                variants={container(0.5)}
-                initial="hidden"
-                animate="visible"
-                className="rounded-md px-4 py-2 text-white bg-purple-500 hover:bg-purple-700"
-              >
-                Download Resume CV
-              </motion.button>
-            </a>
+            <motion.a
+            variants={container(0.5)}
+            initial="hidden"
+            animate="visible"
+             href="../public/resume.pdf" target="_blank" rel="noopener noreferrer" download className="hero-btn mb-6 flex gap-1 rounded-full border border-purple-200/50 px-3 py-2 tracking-tighter">
+              <span>
+                Download Resume CV 
+              </span>
+              <RiArrowRightBoxLine/>
+            </motion.a>
           
             <motion.p
             variants={container(1)}
